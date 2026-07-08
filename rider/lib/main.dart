@@ -11,10 +11,15 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
-  // Add cross-flavor configuration here
-  await dotenv.load();
+  // Load .env if present; tolerate a missing file so a clean build still boots.
+  try {
+    await dotenv.load();
+  } catch (_) {}
 
-  Environment().initConfig(Environment.dev);
+  // Select the environment at build time: `--dart-define=ENV=prod` (or staging);
+  // defaults to dev. Prevents release builds from silently shipping dev config.
+  const env = String.fromEnvironment('ENV', defaultValue: Environment.dev);
+  Environment().initConfig(env);
 
   await init();
 

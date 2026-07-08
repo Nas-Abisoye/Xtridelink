@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: pub
+    directory: "/customer"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+  - package-ecosystem: pub
+    directory: "/rider"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
