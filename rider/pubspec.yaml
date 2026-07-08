@@ -1,0 +1,154 @@
+name: xtridelink_driver
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+3
+
+environment:
+  sdk: ^3.4.0
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.0.0
+  get_it: ^8.0.3
+
+  # For launcher icon
+  flutter_launcher_icons: ^0.14.3
+
+  flutter_screenutil: ^5.9.0
+
+  # For intents
+  share_plus: ^11.0.0
+
+  # Internationalization, numbers etc
+  intl: ^0.20.2
+
+  # For international phone number
+  intl_phone_number_input: ^0.7.4
+
+  # For internet connections
+  http: ^1.1.0
+  dio: ^5.3.3
+
+  # For splashscreen:
+  flutter_native_splash:
+
+  # For SVG image
+  flutter_svg: ^2.0.7
+
+  # Biometrics
+  local_auth: ^2.1.7
+
+  # DASH BORDER
+  dotted_border: ^2.1.0
+
+  # Local DB
+  flutter_secure_storage: ^9.0.0
+
+  # Pick image from gallery
+  image_picker: ^1.0.4
+  file_picker: ^10.1.9
+
+  # Phone Calls
+  url_launcher: ^6.2.2
+
+  # For Toast messages
+  fluttertoast: ^8.2.2
+
+  # Enable firebase services
+  firebase_core: ^3.13.0
+
+  # To control showing notifications and create notification channels.
+  flutter_local_notifications: ^19.2.1
+
+  # Push notification sdk
+  firebase_messaging: ^15.2.5
+
+  # For Location
+  geolocator: ^13.0.4
+  geocoding: ^3.0.0
+
+  #For real-time server connection
+  socket_io_client: ^3.1.2
+
+  # For audio
+  audioplayers: ^6.4.0
+
+  in_app_update: ^4.2.2
+
+
+  cupertino_icons: ^1.0.2
+  equatable: ^2.0.7
+  flutter_dotenv: ^5.2.1
+  logger: ^2.5.0
+  freezed_annotation: ^3.0.0
+  shared_preferences: ^2.4.0
+  injectable: ^2.5.0
+  formz: ^0.8.0
+  google_fonts: ^6.2.1
+  iconsax: ^0.0.8
+  currency_text_input_formatter: ^2.2.9
+  package_info_plus: ^8.3.0
+  bloc: ^9.0.0
+  flutter_libphonenumber_ios: ^1.4.0
+  cloudinary_public: ^0.23.1
+  web_socket_channel: ^3.0.3
+  device_info_plus: ^11.4.0
+
+#flutter_launcher_icons:
+#  ios: true
+#  remove_alpha_ios: true
+#  android: true
+#  image_path: assets/images/logo.png
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  bloc_test: ^10.0.0
+  build_runner: ^2.4.12
+
+  flutter_gen_runner:
+  injectable_generator: ^2.6.2
+  mocktail: ^1.0.4
+  very_good_analysis: ^7.0.0
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/svg/
+    - assets/audio/
+    - .env
+
+
+  fonts:
+    - family: LIGHT
+      fonts:
+        - asset: assets/fonts/HelveticaNeueLight.ttf
+    - family: MEDIUM
+      fonts:
+        - asset: assets/fonts/HelveticaNeueMedium.ttf
+    - family: BOLD
+      fonts:
+        - asset: assets/fonts/HelveticaNeueBold.ttf
+    - family: HEAVY
+      fonts:
+        - asset: assets/fonts/HelveticaNeue-Heavy.otf
+
+flutter_gen:
+  output: lib/gen/ # Optional (default: lib/gen/)
+  line_length: 80 # Optional (default: 80)
+
+  # Optional
+  integrations:
+    flutter_svg: true
+    rive: true
+    lottie: true

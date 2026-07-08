@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "386872869502",
+    "project_id": "xtridelink",
+    "storage_bucket": "xtridelink.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386872869502:android:631c71d00380f1a3624e2f",
+        "android_client_info": {
+          "package_name": "com.xtridelink.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiOPWi0J8RGidOX42Y-8y7mUNpZb5ECA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/user/Documents/development/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/user/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/user/Documents/Personal Projects/Xtride Logistics/Xtridelink-Customer-Mobile/android/app/.cxx/RelWithDebInfo/69f3g63k/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/user/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/user/Documents/Personal Projects/Xtride Logistics/Xtridelink-Customer-Mobile/android/app/.cxx/RelWithDebInfo/69f3g63k/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

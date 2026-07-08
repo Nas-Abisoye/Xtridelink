@@ -1,0 +1,2 @@
+/Users/user/Documents/Personal Projects/Xtride Logistics/Xtridelink-Customer-Mobile/android/app/.cxx/Debug/5h60362v/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/user/Documents/Personal Projects/Xtride Logistics/Xtridelink-Customer-Mobile/android/app/.cxx/Debug/5h60362v/armeabi-v7a/CMakeFiles/rebuild_cache.dir
