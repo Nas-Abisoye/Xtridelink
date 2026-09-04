@@ -21,27 +21,26 @@ class CustomKeyBoard extends StatefulWidget {
   final int maxLength;
 
   const CustomKeyBoard({
-    Key? key,
+    super.key,
     required this.maxLength,
     this.specialKey,
     this.onChanged,
     this.specialKeyOnTap,
     this.onCompleted,
-  })  : assert(maxLength > 0),
-        super(key: key);
+  }) : assert(maxLength > 0);
   @override
   _CustomKeyBoardState createState() => _CustomKeyBoardState();
 }
 
 class _CustomKeyBoardState extends State<CustomKeyBoard> {
-  String value = "";
+  String value = '';
   Widget buildNumberButton({int? number, Widget? icon, Function()? onPressed}) {
     Widget getChild() {
       if (icon != null) {
         return icon;
       } else {
         return Text(
-          number?.toString() ?? "",
+          number?.toString() ?? '',
           style: AppTextStyle.headline4,
         );
       }
@@ -49,7 +48,7 @@ class _CustomKeyBoardState extends State<CustomKeyBoard> {
 
     return Expanded(
       child: CupertinoButton(
-        key: icon?.key ?? Key("btn$number"),
+        key: icon?.key ?? Key('btn$number'),
         onPressed: onPressed,
         child: getChild(),
       ),
@@ -96,9 +95,9 @@ class _CustomKeyBoardState extends State<CustomKeyBoard> {
             onPressed: widget.specialKeyOnTap ??
                 () {
                   if (value.length < widget.maxLength) {
-                    if (!value.contains(".")) {
+                    if (!value.contains('.')) {
                       setState(() {
-                        value = value + ".";
+                        value = '$value.';
                       });
                     }
                   }

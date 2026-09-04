@@ -7,7 +7,7 @@ import 'package:uuid/uuid.dart';
 class DeviceHelper {
   static DeviceInfoPlugin plugin = DeviceInfoPlugin();
 
-  static const storage = const FlutterSecureStorage();
+  static const storage = FlutterSecureStorage();
 
   static const DEVICEIDKEY = 'device-id-key';
 
@@ -53,7 +53,7 @@ class DeviceHelper {
       storage.write(key: DEVICEIDKEY, value: deviceId);
       return deviceId;
     } else {
-      return "";
+      return '';
     }
   }
 }

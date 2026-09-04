@@ -6,11 +6,11 @@ import 'package:xtridelink/core/widgets/app_text.dart';
 
 class ActionItemTileWidget extends StatelessWidget {
   const ActionItemTileWidget({
-    Key? key,
+    super.key,
     required this.label,
     required this.onPressed,
     required this.icon,
-  }) : super(key: key);
+  });
 
   final String label;
   final VoidCallback onPressed;
@@ -23,7 +23,7 @@ class ActionItemTileWidget extends StatelessWidget {
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-            color: AppColors.iconLemon.withOpacity(0.2),
+            color: AppColors.iconLemon.withValues(alpha: 0.2),
             borderRadius: BorderRadius.circular(12)),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),

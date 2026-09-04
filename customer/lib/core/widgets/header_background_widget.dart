@@ -4,11 +4,11 @@ import 'package:xtridelink/core/theme/app_colors.dart';
 
 class HeaderBackgroundWidget extends StatelessWidget {
   const HeaderBackgroundWidget({
-    Key? key,
+    super.key,
     required this.heightPercent,
     this.child,
     this.backgroundColor,
-  }) : super(key: key);
+  });
 
   ///Background height (in percentage)
   final double heightPercent;
@@ -48,10 +48,10 @@ class HeaderBackgroundWidget extends StatelessWidget {
 
 class HeaderBackgroundStaticWidget extends StatelessWidget {
   const HeaderBackgroundStaticWidget({
-    Key? key,
+    super.key,
     this.child,
     this.backgroundColor,
-  }) : super(key: key);
+  });
 
   final Widget? child;
   final Color? backgroundColor;

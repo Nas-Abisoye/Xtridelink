@@ -75,7 +75,7 @@ class SearchField<T> extends StatefulWidget {
   final TextCapitalization textCapitalization;
 
   SearchField(
-      {Key? key,
+      {super.key,
       required this.suggestions,
       this.autofocus = false,
       required this.controller,
@@ -108,8 +108,7 @@ class SearchField<T> extends StatefulWidget {
             (initialValue != null &&
                     suggestions.containsObject(initialValue)) ||
                 initialValue == null,
-            'Initial value should either be null or should be present in suggestions list.'),
-        super(key: key);
+            'Initial value should either be null or should be present in suggestions list.');
 
   @override
   State<SearchField<T>> createState() => _SearchFieldState();
@@ -211,12 +210,12 @@ class _SearchFieldState<T> extends State<SearchField<T>> {
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                    color: Colors.grey.withOpacity(0.01),
+                    color: Colors.grey.withValues(alpha: 0.01),
                     spreadRadius: 1,
                     blurRadius: 10,
                     offset: const Offset(0, 0)),
                 BoxShadow(
-                    color: Colors.grey.withOpacity(0.1),
+                    color: Colors.grey.withValues(alpha: 0.1),
                     spreadRadius: 1,
                     blurRadius: 10,
                     offset: const Offset(0, 0))
@@ -266,7 +265,7 @@ class _SearchFieldState<T> extends State<SearchField<T>> {
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(
-                            color: AppColors.grey.withOpacity(0.1),
+                            color: AppColors.grey.withValues(alpha: 0.1),
                           ),
                         ),
                       ),
@@ -338,7 +337,7 @@ class _SearchFieldState<T> extends State<SearchField<T>> {
                     padding:
                         EdgeInsets.symmetric(vertical: 10.h, horizontal: 12.w),
                     child: SvgPicture.asset(widget.prefixIcon!,
-                        color: AppColors.grey.withOpacity(.8))),
+                        color: AppColors.grey.withValues(alpha: .8))),
             suffixIcon: widget.suffixIcon == null
                 ? null
                 : GestureDetector(
@@ -348,13 +347,13 @@ class _SearchFieldState<T> extends State<SearchField<T>> {
                       widget.onMapLocationPicked(v);
                     }),
                     child: SvgPicture.asset(widget.suffixIcon!,
-                            color: AppColors.grey.withOpacity(.8))
+                            color: AppColors.grey.withValues(alpha: .8))
                         .pd(EdgeInsets.symmetric(
                             vertical: 12.5.h, horizontal: 13.w)),
                   ),
             hintText: widget.hintText,
-            hintStyle:
-                AppTextStyles.regularText(color: Colors.black.withOpacity(0.5)),
+            hintStyle: AppTextStyles.regularText(
+                color: Colors.black.withValues(alpha: 0.5)),
             contentPadding:
                 EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),
             border: widget.borderColor == null
@@ -362,7 +361,8 @@ class _SearchFieldState<T> extends State<SearchField<T>> {
                 : OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8.r),
                     borderSide: BorderSide(color: widget.borderColor!)),
-            fillColor: widget.fillColor ?? AppColors.grey.withOpacity(0.1),
+            fillColor:
+                widget.fillColor ?? AppColors.grey.withValues(alpha: 0.1),
             filled: true,
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8.r),

@@ -92,7 +92,8 @@ class _ForgotPwdPageState extends State<ForgotPwdPage> {
                                 .read<AuthCubit>()
                                 .forgotPassword(email: emailController.text)
                             : null,
-                        color: value ? null : AppColors.grey.withOpacity(.5))
+                        color:
+                            value ? null : AppColors.grey.withValues(alpha: .5))
                     .pd(EdgeInsets.fromLTRB(15.w, 0, 15.w, 10.h));
               }),
         ],

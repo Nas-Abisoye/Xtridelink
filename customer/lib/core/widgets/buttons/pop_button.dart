@@ -5,7 +5,7 @@ import 'animation_button_effect.dart';
 class PopButton extends StatelessWidget {
   final VoidCallback? onTap;
 
-  const PopButton({Key? key, this.onTap}) : super(key: key);
+  const PopButton({super.key, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class PopButton extends StatelessWidget {
         child: Container(
           decoration: const BoxDecoration(
               color: AppColors.black,
-              borderRadius: BorderRadius.all(const Radius.circular(10))),
+              borderRadius: BorderRadius.all(Radius.circular(10))),
           padding: const EdgeInsets.all(14),
           child: const Icon(
             Icons.keyboard_arrow_left,

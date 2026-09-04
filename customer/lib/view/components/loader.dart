@@ -44,7 +44,8 @@ class _CarLoaderState extends State<CarLoader>
           height: (widget.height + widget.increment).h,
           width: double.infinity,
           decoration: BoxDecoration(
-              shape: BoxShape.circle, color: Colors.grey.withOpacity(.2))));
+              shape: BoxShape.circle,
+              color: Colors.grey.withValues(alpha: .2))));
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +60,7 @@ class _CarLoaderState extends State<CarLoader>
               getAnimatedContainer(_animationController.value + .7),
               CircleAvatar(
                   radius: (widget.height / 2).r,
-                  backgroundColor: AppColors.grey.withOpacity(.5),
+                  backgroundColor: AppColors.grey.withValues(alpha: .5),
                   child: SvgPicture.asset(Assets.car,
                       height: (widget.height * .4).h,
                       width: (widget.height * .6).w))

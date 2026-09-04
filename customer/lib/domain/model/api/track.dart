@@ -1,4 +1,4 @@
-import 'package:xtridelink/domain/model/api/order_det.dart';
+// import 'package:xtridelink/domain/model/api/order_det.dart';
 
 class TrackingResData {
   TrackingData data;

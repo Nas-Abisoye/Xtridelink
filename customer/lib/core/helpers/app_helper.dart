@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+// import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:xtridelink/core/theme/app_colors.dart';
 import 'package:xtridelink/core/theme/app_textstyle.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -35,7 +35,7 @@ class AppHelper {
     bool barrierDismissible = false,
   }) {
     return showDialog<T>(
-      barrierColor: AppColors.black.withOpacity(0.8),
+      barrierColor: AppColors.black.withValues(alpha: 0.8),
       context: context,
       barrierDismissible: barrierDismissible,
       builder: (context) => Dialog(

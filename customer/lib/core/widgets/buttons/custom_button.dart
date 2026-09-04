@@ -35,8 +35,8 @@ class CustomButton extends StatelessWidget {
     return AnimationButtonEffect(
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          disabledBackgroundColor: background.withOpacity(0.2),
-          disabledForegroundColor: textColor.withOpacity(0.2),
+          disabledBackgroundColor: background.withValues(alpha: 0.2),
+          disabledForegroundColor: textColor.withValues(alpha: 0.2),
           side: BorderSide(
               color: borderColor == AppColors.transparent
                   ? background

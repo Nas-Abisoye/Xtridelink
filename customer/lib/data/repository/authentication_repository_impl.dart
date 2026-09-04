@@ -7,7 +7,7 @@ import 'package:xtridelink/data/source/remote/model/auth/get_user_details_respon
 import 'package:xtridelink/data/source/remote/model/auth/login_response.dart';
 import 'package:xtridelink/data/source/remote/model/default_response.dart';
 import 'package:xtridelink/data/source/remote/model/notifications/user_notifications_response.dart';
-import 'package:xtridelink/domain/model/api/notifications.dart';
+// import 'package:xtridelink/domain/model/api/notifications.dart';
 import 'package:xtridelink/domain/params/address_verification_params.dart';
 import 'package:xtridelink/domain/params/id_verification_params.dart';
 import 'package:xtridelink/domain/params/login_params.dart';

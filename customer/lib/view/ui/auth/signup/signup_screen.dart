@@ -33,7 +33,7 @@ class PasswordFormValidator {
 class SignupUserFormPage extends StatelessWidget {
   final String phoneNumber;
 
-  SignupUserFormPage({required this.phoneNumber});
+  const SignupUserFormPage({super.key, required this.phoneNumber});
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +94,7 @@ class _SignupUserFormViewState
                             radius: 4.r,
                             backgroundColor: index == 2
                                 ? AppColors.secColor
-                                : AppColors.grey.withOpacity(0.3),
+                                : AppColors.grey.withValues(alpha: 0.3),
                           ).pd(EdgeInsets.symmetric(horizontal: 5.w)))),
               HelperFunc.sb(15.w)
             ]),
@@ -221,7 +221,7 @@ class _SignupUserFormViewState
                           : null,
                       color: state.formData.canCreateUser
                           ? null
-                          : AppColors.grey.withOpacity(.5))
+                          : AppColors.grey.withValues(alpha: .5))
                   .pd(EdgeInsets.fromLTRB(15.w, 0, 15.w, 15.h));
             }),
           ],

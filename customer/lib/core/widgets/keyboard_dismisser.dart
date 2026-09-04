@@ -45,13 +45,13 @@ enum GestureType {
 
 class KeyboardDismisser extends StatelessWidget {
   const KeyboardDismisser({
-    Key? key,
+    super.key,
     this.child,
     this.behavior,
     this.gestures = const [GestureType.onTap],
     this.dragStartBehavior = DragStartBehavior.start,
     this.excludeFromSemantics = false,
-  }) : super(key: key);
+  });
 
   final List<GestureType> gestures;
   final DragStartBehavior dragStartBehavior;

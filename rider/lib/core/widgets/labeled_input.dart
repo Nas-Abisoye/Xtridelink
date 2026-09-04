@@ -9,6 +9,7 @@ import 'package:xtridelink_driver/core/theme/app_colors.dart';
 
 class LabeledInputField extends StatefulWidget {
   const LabeledInputField({
+    super.key,
     required this.label,
     required this.onChanged,
     this.errorText,
@@ -171,7 +172,7 @@ class LabeledModalInputForm extends StatefulWidget {
   final TextEditingController? controller;
 
   const LabeledModalInputForm({
-    Key? key,
+    super.key,
     required this.label,
     this.keyboardType,
     this.obscureText = false,
@@ -188,7 +189,7 @@ class LabeledModalInputForm extends StatefulWidget {
     this.onInit,
     this.controller,
     this.validator,
-  }) : super(key: key);
+  });
 
   @override
   State<LabeledModalInputForm> createState() => _LabeledModalInputFormState();
@@ -247,7 +248,7 @@ class _LabeledModalInputFormState extends State<LabeledModalInputForm> {
 
 class LabeledInputFieldPassword extends StatefulWidget {
   const LabeledInputFieldPassword({
-    Key? key,
+    super.key,
     required this.label,
     required this.onChanged,
     this.errorText,
@@ -258,7 +259,7 @@ class LabeledInputFieldPassword extends StatefulWidget {
     this.height,
     this.autofillHints,
     this.style,
-  }) : super(key: key);
+  });
 
   final String label;
   final Function(String text) onChanged;
@@ -315,7 +316,7 @@ class _LabeledInputFieldPasswordState extends State<LabeledInputFieldPassword> {
 
 class LabeledAmountInputField extends StatelessWidget {
   const LabeledAmountInputField({
-    Key? key,
+    super.key,
     required this.label,
     required this.onChanged,
     this.onTap,
@@ -336,7 +337,7 @@ class LabeledAmountInputField extends StatelessWidget {
     this.initialValue,
     this.autoValidateMode,
     this.onFieldSubmitted,
-  }) : super(key: key);
+  });
 
   final String label;
   final Function(String text) onChanged;
@@ -422,7 +423,7 @@ class LabeledModalInputField extends StatelessWidget {
   final TextEditingController? controller;
 
   const LabeledModalInputField({
-    Key? key,
+    super.key,
     required this.label,
     this.enabled = true,
     this.placeholder,
@@ -430,7 +431,7 @@ class LabeledModalInputField extends StatelessWidget {
     this.controller,
     this.validator,
     this.keyboardType,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -471,7 +472,7 @@ class LabeledModalInputField extends StatelessWidget {
 
 class AccountNumberInputField extends StatefulWidget {
   const AccountNumberInputField({
-    Key? key,
+    super.key,
     required this.label,
     required this.onChanged,
     required this.counter,
@@ -495,7 +496,7 @@ class AccountNumberInputField extends StatefulWidget {
     this.onTap,
     this.validator,
     this.formKey,
-  }) : super(key: key);
+  });
 
   final int? minLines;
   final int? maxLines;
@@ -584,10 +585,10 @@ class _AccountNumberInputFieldState extends State<AccountNumberInputField> {
 
 class LoadingAmountInputField extends StatelessWidget {
   const LoadingAmountInputField({
-    Key? key,
+    super.key,
     required this.label,
     this.message,
-  }) : super(key: key);
+  });
 
   final String label;
   final String? message;
@@ -607,7 +608,7 @@ class LoadingAmountInputField extends StatelessWidget {
         SizedBox(
           child: TextFormField(
             readOnly: true,
-            initialValue: message ?? "Loading...",
+            initialValue: message ?? 'Loading...',
             decoration: const InputDecoration(
               prefixIcon: Icon(Icons.pending_actions),
             ),
@@ -620,11 +621,11 @@ class LoadingAmountInputField extends StatelessWidget {
 
 class LabeledDropdownField extends StatefulWidget {
   const LabeledDropdownField({
-    Key? key,
+    super.key,
     required this.label,
     required this.onChanged,
     this.errorText,
-  }) : super(key: key);
+  });
 
   final String label;
   final Function(String text) onChanged;

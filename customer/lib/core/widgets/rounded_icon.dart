@@ -3,14 +3,14 @@ import 'package:xtridelink/core/theme/app_colors.dart';
 
 class RoundedIcon extends StatelessWidget {
   const RoundedIcon({
-    Key? key,
+    super.key,
     this.elevation = 0,
     this.backgroundColor = AppColors.white,
     this.icon,
     this.width,
     this.height,
     this.padding,
-  }) : super(key: key);
+  });
 
   final double elevation;
   final Color? backgroundColor;

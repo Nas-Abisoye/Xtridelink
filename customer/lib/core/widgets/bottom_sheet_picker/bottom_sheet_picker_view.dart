@@ -109,7 +109,7 @@ class _BottomSheetPickerState<T> extends State<BottomSheetPicker<T>> {
                 borderRadius: BorderRadius.circular(8),
                 // color: AppColors.grey.withOpacity(0.4),
                 border: Border.all(
-                  color: AppColors.grey3.withOpacity(0.4),
+                  color: AppColors.grey3.withValues(alpha: 0.4),
                 ),
               ),
               padding: const EdgeInsets.symmetric(
@@ -223,7 +223,7 @@ class _BottomSheetListPickerViewState<T>
                       child: Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
-                            color: AppColors.iconLemon.withOpacity(0.1),
+                            color: AppColors.iconLemon.withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(12)),
                         padding: const EdgeInsets.symmetric(
                             vertical: 10, horizontal: 16),
@@ -252,7 +252,7 @@ class _BottomSheetListPickerViewState<T>
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
-                          color: AppColors.iconLemon.withOpacity(0.2),
+                          color: AppColors.iconLemon.withValues(alpha: 0.2),
                           borderRadius: BorderRadius.circular(12)),
                       padding: const EdgeInsets.symmetric(
                           vertical: 15, horizontal: 16),

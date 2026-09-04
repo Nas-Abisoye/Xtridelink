@@ -10,13 +10,12 @@ class PickDateWidget extends StatefulWidget {
   final String nullDateText;
   final DateTime? firstDate, lastDate, initialDate;
   const PickDateWidget(
-      {Key? key,
+      {super.key,
       this.onDateChanged,
       required this.nullDateText,
       this.firstDate,
       this.lastDate,
-      this.initialDate})
-      : super(key: key);
+      this.initialDate});
 
   @override
   State<PickDateWidget> createState() => _PickDateWidgetState();
@@ -51,7 +50,7 @@ class _PickDateWidgetState extends State<PickDateWidget> {
       child: Container(
           padding: EdgeInsets.symmetric(vertical: 14.h, horizontal: 14.w),
           decoration: BoxDecoration(
-              color: AppColors.grey.withOpacity(.1),
+              color: AppColors.grey.withValues(alpha: .1),
               borderRadius: BorderRadius.circular(10.r)),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [

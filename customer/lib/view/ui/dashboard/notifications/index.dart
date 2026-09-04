@@ -58,7 +58,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                             children: [
                               Icon(Icons.sms_failed_outlined,
                                   size: 100.h,
-                                  color: AppColors.grey.withOpacity(.5)),
+                                  color: AppColors.grey.withValues(alpha: .5)),
                               const Text('No notifications found'),
                               HelperFunc.sb(100.h)
                             ],

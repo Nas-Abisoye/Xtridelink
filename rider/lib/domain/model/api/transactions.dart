@@ -22,8 +22,8 @@ class WalletTransactions {
 
   factory WalletTransactions.fromJson(Map<String, dynamic> json) =>
       WalletTransactions(
-        transactions: List<TransactionData>.from(
-            (json['transactions'] ?? []).map((x) => TransactionData.fromJson(x))),
+        transactions: List<TransactionData>.from((json['transactions'] ?? [])
+            .map((x) => TransactionData.fromJson(x))),
         meta: MetaData.fromJson(json['meta'] ?? {}),
       );
 }
@@ -39,6 +39,7 @@ class MetaData {
         total: json['total'] ?? 0,
       );
 }
+
 class TransactionData {
   String? id;
   String? transactionId;
@@ -133,48 +134,48 @@ class TransactionData {
     balanceAfter = json['balance_after'];
     createdAt = json['created_at'];
     userDetails = json['user_details'] != null
-        ? new UserDetails.fromJson(json['user_details'])
+        ? UserDetails.fromJson(json['user_details'])
         : null;
     orderDetails = json['order_details'] != null
-        ? new OrderDetails.fromJson(json['order_details'])
+        ? OrderDetails.fromJson(json['order_details'])
         : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['transaction_id'] = this.transactionId;
-    data['reference'] = this.reference;
-    data['transaction_type'] = this.transactionType;
-    data['amount'] = this.amount;
-    data['fee_amount'] = this.feeAmount;
-    data['net_amount'] = this.netAmount;
-    data['currency'] = this.currency;
-    data['description'] = this.description;
-    data['narration'] = this.narration;
-    data['beneficiary_account_number'] = this.beneficiaryAccountNumber;
-    data['beneficiary_account_name'] = this.beneficiaryAccountName;
-    data['beneficiary_bank_code'] = this.beneficiaryBankCode;
-    data['beneficiary_bank_name'] = this.beneficiaryBankName;
-    data['source_account_number'] = this.sourceAccountNumber;
-    data['source_account_name'] = this.sourceAccountName;
-    data['source_bank_code'] = this.sourceBankCode;
-    data['source_bank_name'] = this.sourceBankName;
-    data['status'] = this.status;
-    data['processor_status_code'] = this.processorStatusCode;
-    data['failure_reason'] = this.failureReason;
-    data['processed_at'] = this.processedAt;
-    data['completed_at'] = this.completedAt;
-    data['session_id'] = this.sessionId;
-    data['cashconnect_reference'] = this.cashconnectReference;
-    data['balance_before'] = this.balanceBefore;
-    data['balance_after'] = this.balanceAfter;
-    data['created_at'] = this.createdAt;
-    if (this.userDetails != null) {
-      data['user_details'] = this.userDetails!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['transaction_id'] = transactionId;
+    data['reference'] = reference;
+    data['transaction_type'] = transactionType;
+    data['amount'] = amount;
+    data['fee_amount'] = feeAmount;
+    data['net_amount'] = netAmount;
+    data['currency'] = currency;
+    data['description'] = description;
+    data['narration'] = narration;
+    data['beneficiary_account_number'] = beneficiaryAccountNumber;
+    data['beneficiary_account_name'] = beneficiaryAccountName;
+    data['beneficiary_bank_code'] = beneficiaryBankCode;
+    data['beneficiary_bank_name'] = beneficiaryBankName;
+    data['source_account_number'] = sourceAccountNumber;
+    data['source_account_name'] = sourceAccountName;
+    data['source_bank_code'] = sourceBankCode;
+    data['source_bank_name'] = sourceBankName;
+    data['status'] = status;
+    data['processor_status_code'] = processorStatusCode;
+    data['failure_reason'] = failureReason;
+    data['processed_at'] = processedAt;
+    data['completed_at'] = completedAt;
+    data['session_id'] = sessionId;
+    data['cashconnect_reference'] = cashconnectReference;
+    data['balance_before'] = balanceBefore;
+    data['balance_after'] = balanceAfter;
+    data['created_at'] = createdAt;
+    if (userDetails != null) {
+      data['user_details'] = userDetails!.toJson();
     }
-    if (this.orderDetails != null) {
-      data['order_details'] = this.orderDetails!.toJson();
+    if (orderDetails != null) {
+      data['order_details'] = orderDetails!.toJson();
     }
     return data;
   }
@@ -194,10 +195,10 @@ class UserDetails {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['email'] = this.email;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['email'] = email;
     return data;
   }
 }
@@ -225,16 +226,15 @@ class OrderDetails {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['tracking_id'] = this.trackingId;
-    data['status'] = this.status;
-    data['pickup_address'] = this.pickupAddress;
-    data['delivery_address'] = this.deliveryAddress;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['tracking_id'] = trackingId;
+    data['status'] = status;
+    data['pickup_address'] = pickupAddress;
+    data['delivery_address'] = deliveryAddress;
     return data;
   }
 }
-
 
 // class TransactionData {
 //   String id;

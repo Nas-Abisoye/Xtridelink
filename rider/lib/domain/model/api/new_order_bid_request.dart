@@ -36,17 +36,17 @@ class NewOrderBidRequest {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['event'] = this.event;
-    data['order_id'] = this.orderId;
-    data['tracking_id'] = this.trackingId;
-    data['pickup_address'] = this.pickupAddress;
-    data['delivery_address'] = this.deliveryAddress;
-    data['package_type'] = this.packageType;
-    data['vehicle_type'] = this.vehicleType;
-    data['base_price'] = this.basePrice;
-    data['distance'] = this.distance;
-    data['bid_timeout_seconds'] = this.bidTimeoutSeconds;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['event'] = event;
+    data['order_id'] = orderId;
+    data['tracking_id'] = trackingId;
+    data['pickup_address'] = pickupAddress;
+    data['delivery_address'] = deliveryAddress;
+    data['package_type'] = packageType;
+    data['vehicle_type'] = vehicleType;
+    data['base_price'] = basePrice;
+    data['distance'] = distance;
+    data['bid_timeout_seconds'] = bidTimeoutSeconds;
     return data;
   }
 }

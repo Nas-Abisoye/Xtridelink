@@ -92,7 +92,7 @@ class _PaymentOptionsSheetState extends State<PaymentOptionsSheet> {
                                   .generatePaymentAccount(),
                       btnText: 'Proceed',
                       color: value == null
-                          ? AppColors.grey.withOpacity(.5)
+                          ? AppColors.grey.withValues(alpha: .5)
                           : null),
                 )
               ]).pd(EdgeInsets.symmetric(horizontal: 20.w));

@@ -61,7 +61,7 @@ class ChooseDeliveryType extends StatelessWidget {
                             ? AppColors.secColor
                             : Colors.white,
                         avatarSvg: Assets.order,
-                        avatarIconColor: AppColors.grey.withOpacity(.9),
+                        avatarIconColor: AppColors.grey.withValues(alpha: .9),
                         headerTxt: 'Normal Delivery  ',
                         subTxt: 'Basic delivery service'),
                   ],

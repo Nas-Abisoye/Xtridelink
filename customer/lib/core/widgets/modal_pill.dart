@@ -3,8 +3,8 @@ import 'package:xtridelink/core/theme/app_colors.dart';
 
 class ModalPill extends StatelessWidget {
   const ModalPill({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class ModalPill extends StatelessWidget {
       height: 8,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: AppColors.grey4.withOpacity(0.3),
+        color: AppColors.grey4.withValues(alpha: 0.3),
       ),
     );
   }

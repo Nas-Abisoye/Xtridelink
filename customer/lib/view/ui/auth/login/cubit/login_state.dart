@@ -7,7 +7,7 @@ class LoginState extends BaseState {
 
   bool get canLogin => Formz.validate([phone, password]) && !isLoading;
 
-  LoginState._({
+  const LoginState._({
     required this.phone,
     required this.password,
     required this.loginResponse,
@@ -30,7 +30,7 @@ class LoginState extends BaseState {
     bool? isLoading,
   }) =>
       LoginState._(
-        phone: email ?? this.phone,
+        phone: email ?? phone,
         password: password ?? this.password,
         loginResponse: loginResponse ?? this.loginResponse,
         exception: exception ?? this.exception,

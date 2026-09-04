@@ -6,7 +6,7 @@ class SignupState extends BaseState {
   final ProcessState<String> verifyOtpResponse;
   final ProcessState<String> createUserResponse;
 
-  SignupState._({
+  const SignupState._({
     required this.formData,
     required this.initiatSignupResponse,
     required this.verifyOtpResponse,

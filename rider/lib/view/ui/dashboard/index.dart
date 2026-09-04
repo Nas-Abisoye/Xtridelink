@@ -125,12 +125,12 @@ class BottomNavigationBar extends StatelessWidget {
             color: Colors.white,
             boxShadow: [
               BoxShadow(
-                  color: Colors.grey.withOpacity(0.01),
+                  color: Colors.grey.withValues(alpha: 0.01),
                   spreadRadius: 1,
                   blurRadius: 10,
                   offset: const Offset(0, 0)),
               BoxShadow(
-                  color: Colors.grey.withOpacity(0.1),
+                  color: Colors.grey.withValues(alpha: 0.1),
                   spreadRadius: 1,
                   blurRadius: 10,
                   offset: const Offset(0, 0))
@@ -146,14 +146,14 @@ class BottomNavigationBar extends StatelessWidget {
                       txt: 'Home',
                       color: value == 0
                           ? AppColors.secColor
-                          : AppColors.grey.withOpacity(0.5),
+                          : AppColors.grey.withValues(alpha: 0.5),
                       onTap: () => tabIdx.value = 0),
                   BottomNavItem(
                       svg: Assets.history,
                       txt: 'History',
                       color: value == 1
                           ? AppColors.secColor
-                          : AppColors.grey.withOpacity(0.5),
+                          : AppColors.grey.withValues(alpha: 0.5),
                       onTap: () => tabIdx.value = 1),
                   const OrderDispatch(),
                   BottomNavItem(
@@ -161,14 +161,14 @@ class BottomNavigationBar extends StatelessWidget {
                       txt: 'Wallet',
                       color: value == 2
                           ? AppColors.secColor
-                          : AppColors.grey.withOpacity(0.5),
+                          : AppColors.grey.withValues(alpha: 0.5),
                       onTap: () => tabIdx.value = 2),
                   BottomNavItem(
                       svg: Assets.profile,
                       txt: 'Profile',
                       color: value == 3
                           ? AppColors.secColor
-                          : AppColors.grey.withOpacity(0.5),
+                          : AppColors.grey.withValues(alpha: 0.5),
                       onTap: () => tabIdx.value = 3),
                 ],
               );
@@ -326,14 +326,14 @@ class _BidRequestViewState extends State<BidRequestView> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _infoTile(Icons.receipt_long, "Order ID", req.orderId!.toOrderIdTag()),
-        _infoTile(Icons.location_on, "Pickup Address", req.pickupAddress),
-        _infoTile(Icons.flag, "Delivery Address", req.deliveryAddress),
+        _infoTile(Icons.receipt_long, 'Order ID', req.orderId!.toOrderIdTag()),
+        _infoTile(Icons.location_on, 'Pickup Address', req.pickupAddress),
+        _infoTile(Icons.flag, 'Delivery Address', req.deliveryAddress),
         // _infoTile(Icons.inventory_2, "Package Type", req.packageType),
         // _infoTile(Icons.local_shipping, "Vehicle Type", req.vehicleType),
-        _infoTile(Icons.map, "Distance",
+        _infoTile(Icons.map, 'Distance',
             "${req.distance?.toStringAsFixed(2) ?? '-'} km"),
-        _infoTile(Icons.attach_money, "Base Price", "₦${req.basePrice ?? '-'}"),
+        _infoTile(Icons.attach_money, 'Base Price', "₦${req.basePrice ?? '-'}"),
         // _infoTile(
         //     Icons.timer, "Bid Timeout", "${req.bidTimeoutSeconds ?? 0} sec"),
       ],
@@ -361,7 +361,7 @@ class _BidRequestViewState extends State<BidRequestView> {
                 ),
                 const SizedBox(height: 2),
                 Text(
-                  value ?? "-",
+                  value ?? '-',
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w500,

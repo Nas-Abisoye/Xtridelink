@@ -10,14 +10,13 @@ class Tag extends StatelessWidget {
   final double txtFont;
   final void Function()? onTap;
   const Tag(
-      {Key? key,
+      {super.key,
       this.padding,
       this.txtFont = 10.5,
       this.txtColor,
       this.color,
       this.onTap,
-      this.txt = ''})
-      : super(key: key);
+      this.txt = ''});
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +27,8 @@ class Tag extends StatelessWidget {
               padding ?? EdgeInsets.symmetric(vertical: 4.h, horizontal: 8.w),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.r),
-              color:
-                  color ?? (txtColor ?? AppColors.secColor).withOpacity(0.15)),
+              color: color ??
+                  (txtColor ?? AppColors.secColor).withValues(alpha: 0.15)),
           child: Text(txt,
               style: AppTextStyles.mediumText(
                   fontSize: txtFont, color: txtColor ?? AppColors.secColor))),

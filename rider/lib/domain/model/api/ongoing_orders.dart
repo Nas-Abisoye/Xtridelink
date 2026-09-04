@@ -88,10 +88,10 @@ class OrderDetails {
   OrderDetails.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     customerDetails = json['customer_details'] != null
-        ? new CustomerDetails.fromJson(json['customer_details'])
+        ? CustomerDetails.fromJson(json['customer_details'])
         : null;
     riderDetails = json['rider_details'] != null
-        ? new RiderDetails.fromJson(json['rider_details'])
+        ? RiderDetails.fromJson(json['rider_details'])
         : null;
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
@@ -125,7 +125,7 @@ class OrderDetails {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
     if (customerDetails != null) {
       data['customer_details'] = customerDetails!.toJson();
@@ -186,7 +186,7 @@ class OrderDetails {
     String? recipientEmail,
     String? deliveryNotes,
     bool? enable2fa,
-    Null? deliveryCode,
+    Null deliveryCode,
     String? codeDeliveryMethod,
     String? basePrice,
     String? negotiatedPrice,
@@ -251,7 +251,7 @@ class CustomerDetails {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
     data['name'] = name;
     data['phone_number'] = phoneNumber;
@@ -265,7 +265,7 @@ class RiderDetails {
   String? name;
   String? phoneNumber;
   String? email;
-  Null? riderStuff;
+  Null riderStuff;
 
   RiderDetails(
       {this.id, this.name, this.phoneNumber, this.email, this.riderStuff});
@@ -283,7 +283,7 @@ class RiderDetails {
   String? get longitude => null;
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     data['id'] = id;
     data['name'] = name;
     data['phone_number'] = phoneNumber;

@@ -107,7 +107,7 @@ class _AddPhoneSignupPageState extends State<AddPhoneSignupPage> {
       ValueListenableBuilder(
           valueListenable: phoneNoController,
           builder: (context, value, _) {
-            print(value.text);
+            debugPrint(value.text);
             return AppButton(
                     btnText: 'Continue',
                     onTap: () => value.text.replaceAll(' ', '').length == 10
@@ -117,7 +117,7 @@ class _AddPhoneSignupPageState extends State<AddPhoneSignupPage> {
                         : null,
                     color: value.text.replaceAll(' ', '').length == 10
                         ? null
-                        : AppColors.grey.withOpacity(.5))
+                        : AppColors.grey.withValues(alpha: .5))
                 .pd(EdgeInsets.symmetric(horizontal: 15.w));
           }),
       HelperFunc.sb(5.h),

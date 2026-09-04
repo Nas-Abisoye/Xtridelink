@@ -29,8 +29,8 @@ class User {
   String? phone;
   String? countryCode;
   DateTime? dob;
-  dynamic? rating;
-  dynamic? profileImg;
+  dynamic rating;
+  dynamic profileImg;
   String? location;
   String? latitude;
   String? longitude;
@@ -139,8 +139,8 @@ class User {
       dob: map['dob'] != null
           ? DateTime.fromMillisecondsSinceEpoch(map['dob'])
           : null,
-      rating: map['rating'] ?? null,
-      profileImg: map['profileImg'] ?? null,
+      rating: map['rating'],
+      profileImg: map['profileImg'],
       location: map['location'] ?? '',
       latitude: map['latitude'] ?? '',
       longitude: map['longitude'] ?? '',

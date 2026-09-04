@@ -154,7 +154,7 @@ class _ChooseLocationForSetupState extends State<ChooseLocationForSetup> {
                             : null,
                         color: value != null
                             ? null
-                            : AppColors.grey.withOpacity(.5))
+                            : AppColors.grey.withValues(alpha: .5))
                     .pd(EdgeInsets.fromLTRB(15.w, 0, 15.w, 10.h));
               }),
         ],

@@ -132,7 +132,7 @@ class _Provide2FASheetState extends State<Provide2FASheet> {
                         ? () => widget
                             .onSubmit(otpController.text.replaceAll('-', ''))
                         : null,
-                    color: value ? null : AppColors.grey.withOpacity(.5)),
+                    color: value ? null : AppColors.grey.withValues(alpha: .5)),
               );
             }),
         SizedBox(height: focusNode.hasFocus ? 200.h : 0)

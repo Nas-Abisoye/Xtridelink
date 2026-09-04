@@ -19,12 +19,12 @@ class DefaultResponse {
   });
 
   factory DefaultResponse.fromMap(Map<String, dynamic> json) => DefaultResponse(
-        status: json["status"],
-        message: json["message"],
+        status: json['status'],
+        message: json['message'],
       );
 
   Map<String, dynamic> toMap() => {
-        "status": status,
-        "message": message,
+        'status': status,
+        'message': message,
       };
 }

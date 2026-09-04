@@ -72,7 +72,7 @@ class ProfileCubit extends Cubit<ProfileState> {
       globalPop();
       onSuccess?.call();
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
       globalPop();
     } finally {}
   }

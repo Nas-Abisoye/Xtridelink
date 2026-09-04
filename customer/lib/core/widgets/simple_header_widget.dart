@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 import 'package:xtridelink/core/widgets/header_background_widget.dart';
 
 const bigFlex = 14;
@@ -14,14 +14,13 @@ class SimpleHeaderWidget extends StatelessWidget {
   final Color? closeIconColor;
 
   const SimpleHeaderWidget(
-      {Key? key,
+      {super.key,
       this.heightPercent,
       required this.title,
       this.showBackButton = true,
       this.trailing,
       this.onClose,
-      this.closeIconColor})
-      : super(key: key);
+      this.closeIconColor});
 
   @override
   Widget build(BuildContext context) {

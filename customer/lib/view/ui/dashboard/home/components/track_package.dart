@@ -50,8 +50,8 @@ class _HomeTrackPackageState extends State<HomeTrackPackage> {
               onTap: () {},
               behavior: HitTestBehavior.opaque,
               child: AppFormField(
-                prefixWidget:
-                    Icon(Icons.search, color: AppColors.grey.withOpacity(.5)),
+                prefixWidget: Icon(Icons.search,
+                    color: AppColors.grey.withValues(alpha: .5)),
                 hintText: 'Tracking number',
                 controller: trackController,
                 validator: (v) => null,

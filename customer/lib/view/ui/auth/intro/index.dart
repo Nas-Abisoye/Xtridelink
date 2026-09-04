@@ -96,17 +96,18 @@ class _IntroPageState extends State<IntroPage> {
                                         color: AppColors.grey))
                                 .pd(EdgeInsets.symmetric(horizontal: 25.w)),
                             Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: List.generate(
-                                    images.length,
-                                    (index) => CircleAvatar(
-                                          radius: 4.r,
-                                          backgroundColor: i == index
-                                              ? AppColors.secColor
-                                              : AppColors.grey.withOpacity(0.4),
-                                        ).pd(EdgeInsets.symmetric(
-                                            horizontal: 5.w)))).pd(
-                                EdgeInsets.symmetric(vertical: 30.h)),
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: List.generate(
+                                        images.length,
+                                        (index) => CircleAvatar(
+                                              radius: 4.r,
+                                              backgroundColor: i == index
+                                                  ? AppColors.secColor
+                                                  : AppColors.grey
+                                                      .withValues(alpha: 0.4),
+                                            ).pd(EdgeInsets.symmetric(
+                                                horizontal: 5.w))))
+                                .pd(EdgeInsets.symmetric(vertical: 30.h)),
                             HelperFunc.sb(20.h),
                             AppButton(
                               btnText: i < (images.length - 1)

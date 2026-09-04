@@ -21,7 +21,7 @@ class OrderParams extends Equatable {
   final String? codeDeliveryMethod;
   final String? basePrice;
 
-  OrderParams({
+  const OrderParams({
     this.pickupAddress,
     this.pickupLatitude,
     this.pickupLongitude,

@@ -1,4 +1,4 @@
-import 'dart:ui';
+// import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -32,7 +32,7 @@ class AppColors {
 
   static List<BoxShadow> defaultBoxShadow = [
     BoxShadow(
-      color: Colors.grey.withOpacity(0.2),
+      color: Colors.grey.withValues(alpha: 0.2),
       spreadRadius: 0,
       blurRadius: 16,
       offset: const Offset(0, -4),
@@ -40,7 +40,7 @@ class AppColors {
   ];
   static List<BoxShadow> yellowBoxShadow = [
     BoxShadow(
-      color: Colors.amber.withOpacity(0.8),
+      color: Colors.amber.withValues(alpha: 0.8),
       spreadRadius: 0,
       blurRadius: 16,
       offset: const Offset(0, -4),

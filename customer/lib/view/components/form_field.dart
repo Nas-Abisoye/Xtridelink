@@ -28,7 +28,7 @@ class AppFormField extends StatefulWidget {
   final TextAlign textAlign;
 
   const AppFormField(
-      {Key? key,
+      {super.key,
       required this.hintText,
       this.labelText,
       this.keyBoardType = TextInputType.text,
@@ -54,8 +54,7 @@ class AppFormField extends StatefulWidget {
       this.radius,
       this.isAutoFocus = false,
       this.textLength = 100,
-      this.maxLength = 35})
-      : super(key: key);
+      this.maxLength = 35});
 
   @override
   State<AppFormField> createState() => _AppFormFieldState();
@@ -113,7 +112,7 @@ class _AppFormFieldState extends State<AppFormField> {
                     padding:
                         EdgeInsets.symmetric(vertical: 10.h, horizontal: 12.w),
                     child: SvgPicture.asset(widget.prefixIcon!,
-                        color: AppColors.grey.withOpacity(.8)))),
+                        color: AppColors.grey.withValues(alpha: .8)))),
         suffixIcon: widget.suffixWidget ??
             (widget.isPassword
                 ? IconButton(
@@ -129,12 +128,12 @@ class _AppFormFieldState extends State<AppFormField> {
                 : widget.suffixIcon == null
                     ? null
                     : SvgPicture.asset(widget.suffixIcon!,
-                            color: AppColors.grey.withOpacity(.8))
+                            color: AppColors.grey.withValues(alpha: .8))
                         .pd(EdgeInsets.symmetric(
                             vertical: 12.5.h, horizontal: 13.w))),
         hintText: widget.hintText,
-        hintStyle:
-            AppTextStyles.regularText(color: Colors.black.withOpacity(0.5)),
+        hintStyle: AppTextStyles.regularText(
+            color: Colors.black.withValues(alpha: 0.5)),
         // labelStyle:
         //     AppTextStyles.regularText(color: Colors.black.withOpacity(0.5)),
         contentPadding: widget.contentPadding ??
@@ -144,7 +143,7 @@ class _AppFormFieldState extends State<AppFormField> {
             : OutlineInputBorder(
                 borderRadius: BorderRadius.circular(widget.radius ?? 8.r),
                 borderSide: BorderSide(color: widget.borderColor!)),
-        fillColor: widget.fillColor ?? AppColors.grey.withOpacity(0.1),
+        fillColor: widget.fillColor ?? AppColors.grey.withValues(alpha: 0.1),
         filled: true,
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(widget.radius ?? 8.r),

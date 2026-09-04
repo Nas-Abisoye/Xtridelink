@@ -50,12 +50,12 @@ class HomeCurrentOrders extends StatelessWidget {
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
-                        color: Colors.grey.withOpacity(0.01),
+                        color: Colors.grey.withValues(alpha: 0.01),
                         spreadRadius: 1,
                         blurRadius: 10,
                         offset: const Offset(0, 0)),
                     BoxShadow(
-                        color: Colors.grey.withOpacity(0.1),
+                        color: Colors.grey.withValues(alpha: 0.1),
                         spreadRadius: 1,
                         blurRadius: 10,
                         offset: const Offset(0, 0))
@@ -67,12 +67,14 @@ class HomeCurrentOrders extends StatelessWidget {
                   HelperFunc.sb(10.h),
                   Text('No new orders',
                       style: AppTextStyles.semiBold(
-                          fontSize: 14, color: AppColors.grey.withOpacity(.7))),
+                          fontSize: 14,
+                          color: AppColors.grey.withValues(alpha: .7))),
                   HelperFunc.sb(5.h),
                   Text('You currently don’t have any shipment enroute',
                       textAlign: TextAlign.center,
                       style: AppTextStyles.regularText(
-                          fontSize: 10, color: AppColors.grey.withOpacity(.5))),
+                          fontSize: 10,
+                          color: AppColors.grey.withValues(alpha: .5))),
                 ],
               ),
             ),
@@ -98,7 +100,7 @@ class CurrentOrderCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print(order.status);
+        debugPrint(order.status);
         switch (order.status) {
           case 'pending':
           case 'searching_driver':
@@ -126,12 +128,12 @@ class CurrentOrderCard extends StatelessWidget {
             color: Colors.white,
             boxShadow: [
               BoxShadow(
-                  color: Colors.grey.withOpacity(0.01),
+                  color: Colors.grey.withValues(alpha: 0.01),
                   spreadRadius: 1,
                   blurRadius: 10,
                   offset: const Offset(0, 0)),
               BoxShadow(
-                  color: Colors.grey.withOpacity(0.1),
+                  color: Colors.grey.withValues(alpha: 0.1),
                   spreadRadius: 1,
                   blurRadius: 10,
                   offset: const Offset(0, 0))
@@ -227,7 +229,7 @@ class CurrentOrderCard extends StatelessWidget {
                                                   ? 1
                                                   : 0)
                               ? AppColors.materialColor
-                              : AppColors.grey.withOpacity(0.2),
+                              : AppColors.grey.withValues(alpha: 0.2),
                           thickness: 2)
                       .pd(EdgeInsets.symmetric(horizontal: 3.w))
                       .EXPANDED),
@@ -235,7 +237,7 @@ class CurrentOrderCard extends StatelessWidget {
               SvgPicture.asset(Assets.doubleCircle,
                   color: order.status == 'COMPLETED'
                       ? null
-                      : AppColors.grey.withOpacity(.3))
+                      : AppColors.grey.withValues(alpha: .3))
             ]),
             HelperFunc.sb(20.h),
             Row(children: [

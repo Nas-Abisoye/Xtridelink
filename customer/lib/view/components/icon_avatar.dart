@@ -22,8 +22,9 @@ class IconAvatar extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: CircleAvatar(
-          backgroundColor:
-              circleColor ?? color?.withOpacity(.08) ?? AppColors.lightSec,
+          backgroundColor: circleColor ??
+              color?.withValues(alpha: .08) ??
+              AppColors.lightSec,
           radius: (radius ?? 19).r,
           child: SvgPicture.asset(avatar,
               color: color ?? AppColors.secColor,

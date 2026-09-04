@@ -14,14 +14,13 @@ class CustomPhoneInput extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
   final void Function(PhoneNumber)? onInputChanged;
   const CustomPhoneInput(
-      {Key? key,
+      {super.key,
       this.controller,
       this.suffixIcon,
       this.suffixWidget,
       this.dialCode,
       this.contentPadding,
-      this.onInputChanged})
-      : super(key: key);
+      this.onInputChanged});
 
   @override
   Widget build(BuildContext context) {
@@ -46,14 +45,14 @@ class CustomPhoneInput extends StatelessWidget {
                     child: SvgPicture.asset(suffixIcon!))),
         // labelText: 'Phone Number',
         hintText: 'Phone, Number',
-        hintStyle:
-            AppTextStyles.regularText(color: Colors.black.withOpacity(0.5)),
+        hintStyle: AppTextStyles.regularText(
+            color: Colors.black.withValues(alpha: 0.5)),
         // labelStyle:
         //     AppTextStyles.regularText(color: Colors.black.withOpacity(0.5)),
         contentPadding: contentPadding ??
             EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),
         border: InputBorder.none,
-        fillColor: AppColors.grey.withOpacity(0.1),
+        fillColor: AppColors.grey.withValues(alpha: 0.1),
         filled: true,
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.r),

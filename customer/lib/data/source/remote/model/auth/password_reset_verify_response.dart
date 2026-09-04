@@ -23,15 +23,15 @@ class PasswordResetVerifyResponse {
 
   factory PasswordResetVerifyResponse.fromMap(Map<String, dynamic> json) =>
       PasswordResetVerifyResponse(
-        status: json["status"],
-        message: json["message"],
-        data: json["data"] == null ? null : Data.fromMap(json["data"]),
+        status: json['status'],
+        message: json['message'],
+        data: json['data'] == null ? null : Data.fromMap(json['data']),
       );
 
   Map<String, dynamic> toMap() => {
-        "status": status,
-        "message": message,
-        "data": data?.toMap(),
+        'status': status,
+        'message': message,
+        'data': data?.toMap(),
       };
 }
 
@@ -43,10 +43,10 @@ class Data {
   });
 
   factory Data.fromMap(Map<String, dynamic> json) => Data(
-        resetToken: json["reset_token"],
+        resetToken: json['reset_token'],
       );
 
   Map<String, dynamic> toMap() => {
-        "reset_token": resetToken,
+        'reset_token': resetToken,
       };
 }

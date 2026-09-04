@@ -7,11 +7,11 @@ class CommonAppBar extends StatelessWidget {
   final bool isSearchPage;
 
   const CommonAppBar({
-    Key? key,
+    super.key,
     required this.child,
     this.height = 76,
     this.isSearchPage = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

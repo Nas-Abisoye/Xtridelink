@@ -1,15 +1,16 @@
 import 'dart:convert';
 import 'dart:io';
-import 'dart:math';
+// import 'dart:math';
 import 'package:cloudinary_public/cloudinary_public.dart';
+import 'package:flutter/material.dart';
 import 'package:xtridelink_driver/core/constants/strings.dart';
-import 'package:xtridelink_driver/core/services/api/request_helper.dart';
+// import 'package:xtridelink_driver/core/services/api/request_helper.dart';
 import 'package:xtridelink_driver/core/services/navigation/index.dart';
-import 'package:xtridelink_driver/injector.dart';
+// import 'package:xtridelink_driver/injector.dart';
 import '../../../constants/helpers.dart';
 import '../../storage/index.dart';
 import 'package:http/http.dart' as http;
-import 'package:http_parser/http_parser.dart';
+// import 'package:http_parser/http_parser.dart';
 
 sealed class FileUploadService {
   Future<String?> uploadImage({required File image});
@@ -74,7 +75,7 @@ class FileUploadServiceImpl extends FileUploadService {
         // contentType: MediaType('image', 'jpeg'), // Optional: specify content type
       ));
     } catch (e) {
-      print('Error adding file: $e');
+      debugPrint('Error adding file: $e');
     }
 
     // 6. Send the request
@@ -84,15 +85,15 @@ class FileUploadServiceImpl extends FileUploadService {
     if (response.statusCode == 200) {
       // Convert the streamed response to a string to read the body
       final responseBody = await response.stream.bytesToString();
-      print('Uploaded successfully!');
-      print('Response body: $responseBody');
+      debugPrint('Uploaded successfully!');
+      debugPrint('Response body: $responseBody');
       // You can then decode the JSON response if needed: jsonDecode(responseBody);
       final responseJson = jsonDecode(responseBody);
       return responseJson['data']['url'];
     } else {
-      print('Failed to upload. Status code: ${response.statusCode}');
+      debugPrint('Failed to upload. Status code: ${response.statusCode}');
       final errorBody = await response.stream.bytesToString();
-      print('Error body: $errorBody');
+      debugPrint('Error body: $errorBody');
       return errorBody;
     }
   }

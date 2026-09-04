@@ -108,8 +108,9 @@ class _LoginView extends BaseStatelessPage<LoginCubit> {
                     onTap: state.canLogin
                         ? () => context.read<LoginCubit>().signIn()
                         : null,
-                    color:
-                        state.canLogin ? null : AppColors.grey.withOpacity(.5));
+                    color: state.canLogin
+                        ? null
+                        : AppColors.grey.withValues(alpha: .5));
               },
             ).pd(EdgeInsets.fromLTRB(15.w, 0, 15.w, 10.h)),
           ],

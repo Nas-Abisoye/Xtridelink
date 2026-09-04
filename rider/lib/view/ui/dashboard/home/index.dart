@@ -134,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                     PriceProposalView(
                       proposal: state.customerPriceProposal!,
                       onAccept: () {
-                        print('Accept');
+                        debugPrint('Accept');
                         context.read<OrderFlowCubit>().acceptDeclineOffer(
                             isAccepted: true,
                             offerId:
@@ -296,12 +296,12 @@ class EmptyOrdersScreen extends StatelessWidget {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-                color: Colors.grey.withOpacity(0.01),
+                color: Colors.grey.withValues(alpha: 0.01),
                 spreadRadius: 1,
                 blurRadius: 10,
                 offset: const Offset(0, 0)),
             BoxShadow(
-                color: Colors.grey.withOpacity(0.1),
+                color: Colors.grey.withValues(alpha: 0.1),
                 spreadRadius: 1,
                 blurRadius: 10,
                 offset: const Offset(0, 0))
@@ -313,12 +313,12 @@ class EmptyOrdersScreen extends StatelessWidget {
           HelperFunc.sb(10.h),
           Text(title,
               style: AppTextStyles.semiBold(
-                  fontSize: 14, color: AppColors.grey.withOpacity(.7))),
+                  fontSize: 14, color: AppColors.grey.withValues(alpha: .7))),
           HelperFunc.sb(5.h),
           Text(subTitle,
               textAlign: TextAlign.center,
               style: AppTextStyles.regularText(
-                  fontSize: 10, color: AppColors.grey.withOpacity(.5))),
+                  fontSize: 10, color: AppColors.grey.withValues(alpha: .5))),
         ],
       ),
     );
@@ -342,7 +342,7 @@ class PriceProposalView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.black.withOpacity(0.3),
+      color: Colors.black.withValues(alpha: 0.3),
       child: Center(
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 24.w),

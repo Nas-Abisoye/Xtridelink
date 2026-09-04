@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:xtridelink/core/constants/enumerations.dart';
 import 'package:xtridelink/core/services/navigation/routes.dart';
-import 'package:xtridelink/data/source/remote/model/order/create_order_response.dart';
+// import 'package:xtridelink/data/source/remote/model/order/create_order_response.dart';
 import 'package:xtridelink/data/source/remote/model/order/payment_account_response/data.dart';
-import 'package:xtridelink/domain/model/api/puller_bank.dart';
+// import 'package:xtridelink/domain/model/api/puller_bank.dart';
 import 'package:xtridelink/domain/params/order/order_params.dart';
 import 'package:xtridelink/view/ui/auth/forgot_pwd/create_password.dart';
 import 'package:xtridelink/view/ui/auth/forgot_pwd/forgot_password.dart';

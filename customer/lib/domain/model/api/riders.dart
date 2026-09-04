@@ -41,14 +41,14 @@ class RiderData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['bid_id'] = this.bidId;
-    data['rider_id'] = this.riderId;
-    data['rider_name'] = this.riderName;
-    data['rider_phone'] = this.riderPhone;
-    data['rider_rating'] = this.riderRating;
-    data['proposed_price'] = this.proposedPrice;
-    data['created_at'] = this.createdAt;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['bid_id'] = bidId;
+    data['rider_id'] = riderId;
+    data['rider_name'] = riderName;
+    data['rider_phone'] = riderPhone;
+    data['rider_rating'] = riderRating;
+    data['proposed_price'] = proposedPrice;
+    data['created_at'] = createdAt;
     return data;
   }
 }

@@ -23,15 +23,15 @@ class LoginResponse {
   });
 
   factory LoginResponse.fromMap(Map<String, dynamic> json) => LoginResponse(
-        status: json["status"],
-        message: json["message"],
-        data: json["data"] == null ? null : Data.fromMap(json["data"]),
+        status: json['status'],
+        message: json['message'],
+        data: json['data'] == null ? null : Data.fromMap(json['data']),
       );
 
   Map<String, dynamic> toMap() => {
-        "status": status,
-        "message": message,
-        "data": data?.toMap(),
+        'status': status,
+        'message': message,
+        'data': data?.toMap(),
       };
 }
 
@@ -47,14 +47,14 @@ class Data {
   });
 
   factory Data.fromMap(Map<String, dynamic> json) => Data(
-        accessToken: json["access_token"],
-        refreshToken: json["refresh_token"],
-        user: json["user"] == null ? null : User.fromMap(json["user"]),
+        accessToken: json['access_token'],
+        refreshToken: json['refresh_token'],
+        user: json['user'] == null ? null : User.fromMap(json['user']),
       );
 
   Map<String, dynamic> toMap() => {
-        "access_token": accessToken,
-        "refresh_token": refreshToken,
-        "user": user?.toMap(),
+        'access_token': accessToken,
+        'refresh_token': refreshToken,
+        'user': user?.toMap(),
       };
 }

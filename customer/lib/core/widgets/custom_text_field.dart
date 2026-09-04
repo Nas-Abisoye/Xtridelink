@@ -1,4 +1,4 @@
-import 'dart:convert';
+// import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -303,7 +303,7 @@ class CustomTextField extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
 
   const CustomTextField({
-    Key? key,
+    super.key,
     this.label,
     this.suffixIcon,
     this.prefixIcon,
@@ -324,7 +324,7 @@ class CustomTextField extends StatelessWidget {
     this.minLines,
     this.maxLines = 1,
     this.inputFormatters,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -388,7 +388,7 @@ class CustomTextField extends StatelessWidget {
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
             floatingLabelBehavior: FloatingLabelBehavior.always,
-            fillColor: AppColors.grey1.withOpacity(0.4),
+            fillColor: AppColors.grey1.withValues(alpha: 0.4),
             filled: true,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8),

@@ -4,7 +4,7 @@ import 'package:xtridelink/core/base/base_cubit.dart';
 import 'package:xtridelink/core/base/base_state.dart';
 import 'package:xtridelink/core/helpers/error_handler/error_handler_factory.dart';
 import 'package:xtridelink/core/helpers/error_handler/error_listener_mixin.dart';
-import 'package:xtridelink/core/theme/app_colors.dart';
+// import 'package:xtridelink/core/theme/app_colors.dart';
 import 'package:xtridelink/core/widgets/simple_loading_widget.dart';
 
 abstract class BaseStatefulPage<B extends BaseCubit, P extends StatefulWidget>

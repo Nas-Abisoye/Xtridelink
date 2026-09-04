@@ -12,7 +12,7 @@ class AppText extends StatelessWidget {
   final double? letterSpacing;
 
   const AppText(
-      {Key? key,
+      {super.key,
       this.size = 16,
       this.fontWeight = FontWeight.w400,
       this.textAlign = TextAlign.left,
@@ -20,8 +20,7 @@ class AppText extends StatelessWidget {
       this.textTheme,
       this.overflow,
       this.letterSpacing = 1,
-      this.color})
-      : super(key: key);
+      this.color});
 
   @override
   Widget build(BuildContext context) {

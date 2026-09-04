@@ -237,5 +237,5 @@ enum AjoLoanUserDocumentationStatus {
   incomplete,
   failed,
   completed,
-  pending 
+  pending
 }

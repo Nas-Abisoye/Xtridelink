@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ClickableAreaWidget extends StatelessWidget {
   const ClickableAreaWidget(
-      {Key? key, required this.child, required this.onTap, this.borderRadius});
+      {super.key, required this.child, required this.onTap, this.borderRadius});
 
   final Widget child;
   final Function() onTap;

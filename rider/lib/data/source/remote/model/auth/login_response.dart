@@ -21,15 +21,15 @@ class LoginResponse {
   });
 
   factory LoginResponse.fromMap(Map<String, dynamic> json) => LoginResponse(
-        status: json["status"],
-        message: json["message"],
-        data: json["data"] == null ? null : Data.fromMap(json["data"]),
+        status: json['status'],
+        message: json['message'],
+        data: json['data'] == null ? null : Data.fromMap(json['data']),
       );
 
   Map<String, dynamic> toMap() => {
-        "status": status,
-        "message": message,
-        "data": data?.toMap(),
+        'status': status,
+        'message': message,
+        'data': data?.toMap(),
       };
 }
 
@@ -45,15 +45,15 @@ class Data {
   });
 
   factory Data.fromMap(Map<String, dynamic> json) => Data(
-        accessToken: json["access_token"],
-        refreshToken: json["refresh_token"],
-        user: json["user"] == null ? null : User.fromMap(json["user"]),
+        accessToken: json['access_token'],
+        refreshToken: json['refresh_token'],
+        user: json['user'] == null ? null : User.fromMap(json['user']),
       );
 
   Map<String, dynamic> toMap() => {
-        "access_token": accessToken,
-        "refresh_token": refreshToken,
-        "user": user?.toMap(),
+        'access_token': accessToken,
+        'refresh_token': refreshToken,
+        'user': user?.toMap(),
       };
 }
 
@@ -73,18 +73,18 @@ class User {
   });
 
   factory User.fromMap(Map<String, dynamic> json) => User(
-        email: json["email"],
-        firstName: json["first_name"],
-        lastName: json["last_name"],
-        phoneNumber: json["phone_number"],
-        userRole: json["user_role"],
+        email: json['email'],
+        firstName: json['first_name'],
+        lastName: json['last_name'],
+        phoneNumber: json['phone_number'],
+        userRole: json['user_role'],
       );
 
   Map<String, dynamic> toMap() => {
-        "email": email,
-        "first_name": firstName,
-        "last_name": lastName,
-        "phone_number": phoneNumber,
-        "user_role": userRole,
+        'email': email,
+        'first_name': firstName,
+        'last_name': lastName,
+        'phone_number': phoneNumber,
+        'user_role': userRole,
       };
 }

@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
 import 'package:xtridelink/core/constants/helpers.dart';
@@ -100,7 +101,7 @@ class RequestHelpersImpl extends RequestHelpers {
       HelperFunc.toast('No internet connection.');
       return null;
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
       HelperFunc.toast('An error occurred.\nTry again.');
     }
     return null;
@@ -156,7 +157,7 @@ class RequestHelpersImpl extends RequestHelpers {
       HelperFunc.toast('No internet connection.');
       return null;
     } catch (e) {
-      print(e);
+      debugPrint(e.toString());
       HelperFunc.toast('An error occurred.\nTry again.');
     }
     return null;
